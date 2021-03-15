@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <meu-header :rotas="routes"/>
+    <transition name="pagina">
+      <router-view class="principal"></router-view>
+    </transition>
+    <meu-footer/>
+    <HelloI18n/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloI18n from './components/HelloI18n'
+import { routes } from './routes'
+import Header from './components/shared/header/Header.vue'
+import Footer from './components/shared/footer/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloI18n,
+    'meu-header': Header,
+    'meu-footer': Footer
+  },
+  data () {
+    return {
+      routes
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scope>
+@import './assets/css/reset.css';
+@import './assets/css/normalize.css';
+
+.principal{
+  height: calc(100vh - 160px);
 }
 </style>
