@@ -1,5 +1,6 @@
 # daniloscipioni
 
+Projeto criado para colocar em prática alguns dos conhecimentos adquiridos
 ## Project setup
 ```
 npm install

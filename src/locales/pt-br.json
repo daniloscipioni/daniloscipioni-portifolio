@@ -1,9 +1,14 @@
 {
+  "portuguese":"Português",
+  "english":"Inglês",
   "hello": "Olá i18n in SFC!",
   "welcome": "Bem vindo!",
   "yes-button": "Sim",
   "no-button": "Não!",
   "header":{
-            "home":"Casa"
-            }
+    "home":"Home",
+    "contact":"Contato",
+    "skill":"Habilidades",
+    "func":"Funcionalidades"
+    }
 }

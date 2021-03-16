@@ -1,16 +1,31 @@
 <template>
   <div >
     <select v-model="$i18n.locale" class="menu-item-select">
-      <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
+      <option v-for="(lang, i) in changeLang()" :key="`Lang${i}`" :value="lang[0]">{{ lang[1] }}</option>
     </select>
   </div>
 </template>
 
 <script>
+import i18n from '../../../i18n'
 export default {
+
   name: 'locale-changer',
   data () {
-    return { langs: ['pt-br','en'] }
+    return { 
+
+     }
+  },
+  computed:{
+    langs(){
+      return { langs: [['pt-br', i18n.t('portuguese') ],['en',  i18n.t('english')]] }
+    },
+
+  },
+  methods:{
+    changeLang(){
+      return this.langs.langs;
+    }
   }
 }
 </script>

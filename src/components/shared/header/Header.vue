@@ -2,19 +2,23 @@
   <header class="cabecalho">
     <nav class="menu">
       <ul class="menu-lista">
-        <li class="menu-item" v-for="rota in rotas">
-          <router-link :to="rota.path ? rota.path : '/'" class="menu-link" @click.native="disparaAcao" >{{
-            rota.titulo
-          }}</router-link>
-        </li>
+           <li class="menu-item">
+            <router-link to="/" class="menu-link" @click.native="disparaAcao">{{ $t("header.home") }}</router-link>
+            </li>
+            <li class="menu-item">
+            <router-link to="/contact" class="menu-link" @click.native="disparaAcao">{{ $t("header.contact") }}</router-link>
+            </li>
+            <li class="menu-item">
+            <router-link to="/skill" class="menu-link" @click.native="disparaAcao"  >{{ $t("header.skill") }}</router-link>
+            </li>
+            <li class="menu-item">
+            <router-link to="/funcionalidades" class="menu-link" @click.native="disparaAcao"  >{{ $t("header.func") }}</router-link>
+            </li>
+       
       </ul>
 
     </nav>
     <locale-changer/>
-     <!-- <select class="menu-item-select" name="" id="">
-        <option value="">Portugues</option>
-        <option value="">Inglês</option>
-      </select> -->
   </header>
 </template>
 
@@ -24,12 +28,11 @@ import ChangeLang from '../select/ChangeLang.vue'
 
 export default {
 components: {
-    // HelloI18n,
     'locale-changer': ChangeLang
   },
   data () {
     return {
-      active: false
+      active: false,
     }
   },
 
