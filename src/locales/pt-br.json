@@ -1,0 +1,9 @@
+{
+  "hello": "Olá i18n in SFC!",
+  "welcome": "Bem vindo!",
+  "yes-button": "Sim",
+  "no-button": "Não!",
+  "header":{
+            "home":"Casa"
+            }
+}

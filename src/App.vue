@@ -5,12 +5,12 @@
       <router-view class="principal"></router-view>
     </transition>
     <meu-footer/>
-    <HelloI18n/>
+    <!-- <HelloI18n/> -->
   </div>
 </template>
 
 <script>
-import HelloI18n from './components/HelloI18n'
+// import HelloI18n from './components/HelloI18n'
 import { routes } from './routes'
 import Header from './components/shared/header/Header.vue'
 import Footer from './components/shared/footer/Footer.vue'
@@ -18,7 +18,7 @@ import Footer from './components/shared/footer/Footer.vue'
 export default {
   name: 'App',
   components: {
-    HelloI18n,
+    // HelloI18n,
     'meu-header': Header,
     'meu-footer': Footer
   },

@@ -5,9 +5,12 @@ import VueRouter from 'vue-router'
 import { routes } from './routes'
 import i18n from './i18n'
 
+
 Vue.use(VueRouter)
 
 Vue.config.productionTip = false
+
+
 
 const router = new VueRouter(
   {

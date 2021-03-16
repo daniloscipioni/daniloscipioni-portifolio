@@ -10,16 +10,23 @@
       </ul>
 
     </nav>
-     <select class="menu-item-select" name="" id="">
+    <locale-changer/>
+     <!-- <select class="menu-item-select" name="" id="">
         <option value="">Portugues</option>
         <option value="">Inglês</option>
-      </select>
+      </select> -->
   </header>
 </template>
 
 <script>
-export default {
 
+import ChangeLang from '../select/ChangeLang.vue'
+
+export default {
+components: {
+    // HelloI18n,
+    'locale-changer': ChangeLang
+  },
   data () {
     return {
       active: false
@@ -59,11 +66,7 @@ export default {
   list-style: none;
 }
 
-.menu-item-select {
-  border: 0;
-    background-color: inherit;
-    color: #808080;
-}
+
 
 .menu-item:last-child a {
   margin-right: 0;

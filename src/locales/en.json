@@ -1,3 +1,9 @@
 {
-  "message": "hello i18n !!"
+  "hello": "Hello i18n in SFC!",
+  "welcome": "Welcome!",
+  "yes-button": "Yes",
+  "no-button": "No!",
+  "header":{
+    "home":"Home"
+    }
 }
