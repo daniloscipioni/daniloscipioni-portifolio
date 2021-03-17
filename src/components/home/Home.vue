@@ -4,11 +4,11 @@
     
     <section class="home">
       <meu-banner :url="url" :titulo="titulo" />
-       <p>{{ $t("hello") }} {{ $i18n.locale }}</p>
+      <h1>Home</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos culpa veritatis reprehenderit veniam, accusantium neque, itaque illo sit, iusto maiores minima voluptatibus fugit perspiciatis assumenda quam alias voluptas. Pariatur, consectetur.
+ 
     </section>
-    Home
-  
-  </div>
+     </div>
   
 </template>
 

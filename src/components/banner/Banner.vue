@@ -19,5 +19,15 @@ export default {
     width: 100%;
     height: calc(100vh - 50px);
 }
+@media screen and (min-width: 0) {
+    .banner {
+        height: calc(100vh - 150px);
+    }
+}
 
+@media screen and (min-width: 768px) {
+    .banner {
+        height: calc(100vh - 60px);
+    }
+}
 </style>

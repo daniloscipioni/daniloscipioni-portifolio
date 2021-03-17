@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer"></footer>
+    <footer class="footer">Footer@2021</footer>
 </template>
 
 <script>
@@ -30,8 +30,9 @@ export default {
 
 <style scoped >
 .footer {
-    background:#f9f9f9;
-    color: #fdfdfd;
+  border-top: solid black 1px;
+    background:#f9f9f91b;
+    color: #0c0c0c;
     padding: 1.5625rem 5rem;
     text-transform: lowercase;
 

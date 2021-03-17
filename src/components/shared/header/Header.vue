@@ -2,19 +2,9 @@
   <header class="cabecalho">
     <nav class="menu">
       <ul class="menu-lista">
-           <li class="menu-item">
-            <router-link to="/" class="menu-link" @click.native="disparaAcao">{{ $t("header.home") }}</router-link>
-            </li>
-            <li class="menu-item">
-            <router-link to="/contact" class="menu-link" @click.native="disparaAcao">{{ $t("header.contact") }}</router-link>
-            </li>
-            <li class="menu-item">
-            <router-link to="/skill" class="menu-link" @click.native="disparaAcao"  >{{ $t("header.skill") }}</router-link>
-            </li>
-            <li class="menu-item">
-            <router-link to="/funcionalidades" class="menu-link" @click.native="disparaAcao"  >{{ $t("header.func") }}</router-link>
-            </li>
-       
+           <li class="menu-item" v-for="rota in rotas">
+          <router-link :to="rota.path ? rota.path : '/'" class="menu-link"  > {{$t(rota.title)}}</router-link>
+           </li>
       </ul>
 
     </nav>
@@ -90,5 +80,50 @@ components: {
 .menu-link:hover {
   text-decoration: underline;
 }
+
+
+@media screen and (min-width: 0) {
+    .menu-lista {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu-lista {
+        display: flex;
+        
+    }
+}
+
+@media screen and (min-width: 0) {
+    .menu {
+       display: block;
+       width: 100%;
+       height: 150px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu {
+        display: flex;
+        height: auto;
+        
+    }
+}
+
+@media screen and (min-width: 0) {
+    .menu-item {
+    list-style: none;
+    padding: 5px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu-item {
+     list-style: none;
+    }
+}
+
 
 </style>

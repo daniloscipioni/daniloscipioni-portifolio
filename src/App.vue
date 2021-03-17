@@ -5,7 +5,6 @@
       <router-view class="principal"></router-view>
     </transition>
     <meu-footer/>
-
   </div>
 </template>
 
@@ -34,6 +33,6 @@ export default {
 @import './assets/css/normalize.css';
 
 .principal{
-  height: calc(100vh - 160px);
+  height: 100%;
 }
 </style>
