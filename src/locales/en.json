@@ -10,5 +10,8 @@
     "contact":"Contact",
     "skill":"Skills",
     "func":"Functionalities"
-    }
+    },
+   "footer":{
+        "text":"Developed by {name} @{year}"
+   } 
 }

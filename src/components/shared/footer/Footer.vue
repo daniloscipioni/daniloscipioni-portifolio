@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer">Footer@2021</footer>
+    <footer class="footer">{{ $t('footer.text', { name: 'Danilo Scipioni', year: '2021' }) }}</footer>
 </template>
 
 <script>
@@ -30,11 +30,13 @@ export default {
 
 <style scoped >
 .footer {
-  border-top: solid black 1px;
-    background:#f9f9f91b;
-    color: #0c0c0c;
-    padding: 1.5625rem 5rem;
-    text-transform: lowercase;
+    border-top: solid #f9f9f91b 1px;
+    font-size: 11px;
+    color: #808080;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
 
 }
 </style>
