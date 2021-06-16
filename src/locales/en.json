@@ -9,7 +9,8 @@
     "home":"Home",
     "contact":"Contact",
     "skill":"Skills",
-    "func":"Functionalities"
+    "func":"Functionalities",
+    "login":"Login"
     },
    "footer":{
         "text":"Developed by {name} @{year}"

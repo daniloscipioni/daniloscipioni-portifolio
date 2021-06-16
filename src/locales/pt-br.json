@@ -9,7 +9,8 @@
     "home":"Home",
     "contact":"Contato",
     "skill":"Habilidades",
-    "func":"Funcionalidades"
+    "func":"Funcionalidades",
+    "login":"Login"
     },
     "footer":{
       "text":"Desenvolvido por {name} @{year}"
