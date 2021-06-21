@@ -1,32 +1,52 @@
 <template>
   <div class="login-page">
-  <div class="form">
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
-    <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <button>login</button>
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
-    </form>
+    <div class="form">
+     
+  <sigin v-if="signin"/>
+<register v-if="!signin"/> 
+
+
+        <!-- <form class="register-form" v-if="!signin">
+          <input type="text" placeholder="name" />
+          <input type="password" placeholder="password" />
+          <input type="text" placeholder="email address" />
+          <button>create</button>
+          <p class="message">Already registered? <a href="#" v-on:click="register">Sign In</a></p>
+        </form> -->
+
+        <!-- <form class="login-form" v-if="signin">
+          <input type="text" placeholder="username" />
+          <input type="password" placeholder="password" />
+          <button>login</button>
+          <p class="message">Not registered? <a href="#" v-on:click="register">Create an account</a></p>
+        </form> -->
+
+    </div>
   </div>
-</div>
 </template>
 <script>
+import Signin from '../login/Sigin.vue'
+import Register from '../login/Register.vue'
 export default {
+  components: {
+    sigin: Signin,
+    register: Register
+  },
   data () {
     return {
       usuario: {},
-      mensagemErro: ''
+      mensagemErro: '',
+      signin: true
     }
   },
 
   methods: {
+    register () {
+      this.signin = !this.signin
+      // $('.message a').click(function () {
+      // $('form').animate({ height: 'toggle', opacity: 'toggle' }, 'slow')
+    //  })
+    }
     // efetuarLogin () {
     //   this.$store.dispatch('efetuarLogin', this.usuario)
     //     .then(() => {
@@ -42,18 +62,16 @@ export default {
   }
 }
 </script>
-<style scoped>
-/* .form-login{
-
-}
-.form-item{
-  padding: 5px;
-}
-
-.form-item label{
-  padding-right: 3px;
-} */
+<style>
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-to
+/* .component-fade-leave-active em versões anteriores a 2.1.8 */ {
+  opacity: 0;
+}
+
 
 .login-page {
   width: 360px;
@@ -62,7 +80,7 @@ export default {
 .form {
   position: relative;
   z-index: 1;
-  background: #FFFFFF;
+  background: #ffffff;
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
@@ -84,18 +102,20 @@ export default {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #4caf50;
   width: 100%;
   border: 0;
   padding: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
-  background: #43A047;
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #43a047;
 }
 .form .message {
   margin: 15px 0 0;
@@ -103,19 +123,20 @@ export default {
   font-size: 12px;
 }
 .form .message a {
-  color: #4CAF50;
+  color: #4caf50;
   text-decoration: none;
 }
-.form .register-form {
+/* .form .register-form {
   display: none;
-}
+} */
 .container {
   position: relative;
   z-index: 1;
   max-width: 300px;
   margin: 0 auto;
 }
-.container:before, .container:after {
+.container:before,
+.container:after {
   content: "";
   display: block;
   clear: both;
@@ -140,21 +161,20 @@ export default {
   text-decoration: none;
 }
 .container .info span .fa {
-  color: #EF3B3A;
+  color: #ef3b3a;
 }
 
 @media screen and (max-width: 768px) {
-    .login-page {
-        top: 320px;
-
-    }
+  .login-page {
+    top: 320px;
+  }
 }
 body {
   background: #76b852; /* fallback for old browsers */
-  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-  background: -moz-linear-gradient(right, #76b852, #8DC26F);
-  background: -o-linear-gradient(right, #76b852, #8DC26F);
-  background: linear-gradient(to left, #76b852, #8DC26F);
+  background: -webkit-linear-gradient(right, #76b852, #8dc26f);
+  background: -moz-linear-gradient(right, #76b852, #8dc26f);
+  background: -o-linear-gradient(right, #76b852, #8dc26f);
+  background: linear-gradient(to left, #76b852, #8dc26f);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
