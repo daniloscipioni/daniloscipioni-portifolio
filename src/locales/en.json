@@ -14,5 +14,13 @@
     },
    "footer":{
         "text":"Developed by {name} @{year}"
+   },
+   "login-register":{
+     "username":"username",
+     "password":"password",
+     "not-registered":"Not registered?",
+     "is-registered":"Already registered?",
+     "create-account":"Create an account",
+     "signin":"Sign In"
    } 
 }

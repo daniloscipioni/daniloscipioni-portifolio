@@ -1,18 +1,26 @@
 {
-  "portuguese":"Português",
-  "english":"Inglês",
+  "portuguese": "Português",
+  "english": "Inglês",
   "hello": "Olá i18n in SFC!",
   "welcome": "Bem vindo!",
   "yes-button": "Sim",
   "no-button": "Não!",
-  "header":{
-    "home":"Home",
-    "contact":"Contato",
-    "skill":"Habilidades",
-    "func":"Funcionalidades",
-    "login":"Login"
-    },
-    "footer":{
-      "text":"Desenvolvido por {name} @{year}"
- } 
+  "header": {
+    "home": "Home",
+    "contact": "Contato",
+    "skill": "Habilidades",
+    "func": "Funcionalidades",
+    "login": "Login"
+  },
+  "footer": {
+    "text": "Desenvolvido por {name} @{year}"
+  },
+  "login-register":{
+    "username":"usuário",
+    "password":"senha",
+    "not-registered":"Não é registrado?",
+    "is-registered":"Já é registrado?",
+    "create-account":"Crie uma conta",
+    "signin":"Faça o login"
+  } 
 }
