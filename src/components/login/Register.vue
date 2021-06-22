@@ -1,9 +1,9 @@
 <template>
   <form class="register-form">
-    <input type="text" placeholder="name" />
-    <input type="password" placeholder="password" />
-    <input type="text" placeholder="email address" />
-    <button>create</button>
+    <input type="text" :placeholder="$t('login-register.username')" />
+    <input type="password" :placeholder="$t('login-register.password')" />
+    <input type="text":placeholder="$t('login-register.email-address')" />
+    <button>{{ $t('login-register.create') }}</button>
     <p class="message">
      {{ $t('login-register.is-registered') }} <a href="#" @click="register">{{ $t('login-register.signin') }}</a>
     </p>

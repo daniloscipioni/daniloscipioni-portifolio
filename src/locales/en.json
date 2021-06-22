@@ -21,6 +21,10 @@
      "not-registered":"Not registered?",
      "is-registered":"Already registered?",
      "create-account":"Create an account",
-     "signin":"Sign In"
+     "signin":"Sign In",
+     "create":"Create",
+     "name":"Name",
+     "email-address":"Email Address"
+
    } 
 }

@@ -21,6 +21,9 @@
     "not-registered":"Não é registrado?",
     "is-registered":"Já é registrado?",
     "create-account":"Crie uma conta",
-    "signin":"Faça o login"
+    "signin":"Faça o login",
+    "create":"Criar",
+    "name":"Nome",
+    "email-address":"Endereço de e-mail"
   } 
 }

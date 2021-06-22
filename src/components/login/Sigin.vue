@@ -2,7 +2,7 @@
 
   <form class="login-form">
 
-    <input type="text" :placeholder = "$t('login-register.username')" />
+    <input type="text" :placeholder="$t('login-register.username')" />
     <input type="password" :placeholder="$t('login-register.password')" />
     <button>login</button>
     <p class="message">
