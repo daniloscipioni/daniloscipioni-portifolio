@@ -18,6 +18,8 @@ const router = new VueRouter(
   }
 )
 
+console.log(process.env)
+
 Vue.use(VueResource)
 
 new Vue({
