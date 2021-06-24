@@ -4,7 +4,7 @@ import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import { routes } from './routes'
 import i18n from './i18n'
-import http from '@/http'
+import http from 'http'
 import store from '@/store'
 
 Vue.use(VueRouter)
@@ -19,9 +19,6 @@ const router = new VueRouter(
 )
 
 Vue.use(VueResource)
-
-Vue.http.options.root = process.env.API_URL ? process.env.API_URL : 'http://localhost:3000'
-Vue.prototype.$http = http
 
 new Vue({
   router,
