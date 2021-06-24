@@ -22,7 +22,6 @@ export default {
       this.$emit('registerOrSignin')
     },
     efetuarLogin () {
-      alert(this.user.username)
       this.$store.dispatch('efetuarLogin', this.user)
       //  .then(() => {
       this.$router.push({ path: '/contact' })

@@ -17,7 +17,6 @@ const mutations = {
 
 const actions = {
   efetuarLogin ({ commit }, user) {
-    console.log(user)
     return new Promise((resolve, reject) => {
       http.post('/login', user)
         .then(response => {
