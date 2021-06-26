@@ -20,15 +20,12 @@ const actions = {
     return new Promise((resolve, reject) => {
       http.post('/login', user)
         .then(response => {
-          console.log(response)
+          console.log(response.data)
           commit('DEFINIR_USUARIO_LOGADO', {
-            //    token: response.data.access_token,
-            //    usuario: response.data.user
-            token: 'teste_token',
-            user: user
+            token: response.data.data.authentication.token,
+            user: response.data.data.user.data[0]
           })
-          //     resolve(response.data)
-          resolve(null)
+          resolve(response.data)
         })
         .catch(err => {
           console.log(err)
