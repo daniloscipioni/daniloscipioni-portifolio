@@ -24,6 +24,7 @@
     "signin":"Faça o login",
     "create":"Criar",
     "name":"Nome",
-    "email-address":"Endereço de e-mail"
+    "email-address":"Endereço de e-mail",
+    "error-message": "Usuário ou senha incorretos! Tente novamente."
   } 
 }

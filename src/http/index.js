@@ -2,7 +2,7 @@ import axios from 'axios'
 import store from '@/store'
 
 const http = axios.create({
-  baseURL: process.env.VUE_APP_API_URL ? process.env.VUE_APP_API_URL : 'http://localhost:3000',
+  baseURL: process.env.VUE_APP_API_URL ? process.env.VUE_APP_API_URL : 'http://localhost:3000/api',
   header: {
     Accept: 'application/json',
     Content: 'application/json'
