@@ -1,26 +1,16 @@
 <template>
-  <header class="cabecalho">
-    <header-logged :rotas=rotas v-if="userIsLogged" />
-    <header-not-logged :rotas=rotas v-else/>
-    <locale-changer />
-  </header>
+      <ul class="menu-lista">
+        <li class="menu-item" v-for="rota in rotas" :key="rota.path">
+          <router-link :to="rota.path ? rota.path : '/'" class="menu-link">
+            {{ $t(rota.title) }}</router-link
+          >
+        </li>
+      </ul>
 </template>
 
 <script>
-import ChangeLang from '../select/ChangeLang.vue'
-import HeaderLogged from '../header/HeaderLogged.vue'
-import HeaderNotLogged from '../header/HeaderNotLogged.vue'
-import { mapGetters } from 'vuex'
-
 export default {
-  components: {
-    'locale-changer': ChangeLang,
-    'header-logged': HeaderLogged,
-    'header-not-logged': HeaderNotLogged
-  },
-  computed: {
-    ...mapGetters(['userIsLogged'])
-  },
+  components: {},
   data () {
     return {
       active: false
