@@ -1,14 +1,15 @@
 <template>
-      <ul class="menu-lista">
-        <li class="menu-item" v-for="rota in rotas" :key="rota.path">
-          <router-link :to="rota.path ? rota.path : '/'" class="menu-link">
-            {{ $t(rota.title) }}</router-link
-          >
+<div>
+      <ul class="menu-lista" >
+        <li class="menu-item" v-for="rota in rotas" :key="rota.path" >
+          <router-link :to="rota.path ? rota.path : '/'" class="menu-link"  v-if="!rota.login">{{ $t(rota.title) }}</router-link>
         </li>
       </ul>
+</div>
 </template>
 
 <script>
+
 export default {
   components: {},
   data () {

@@ -11,6 +11,6 @@ export const routes = [
   { path: '/contact', component: Contact, title: 'header.contact', meta: { public: true } },
   { path: '/skill', component: Skill, title: 'header.skill' },
   { path: '/funcionalidades', component: Func, title: 'header.func', meta: { public: true } },
-  { path: '/login', component: LoginAccess, title: 'header.login', meta: { public: true } }
+  { path: '/login', component: LoginAccess, title: 'header.login', meta: { public: true }, login: { public: false } },
 
 ]

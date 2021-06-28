@@ -10,7 +10,8 @@
     "contact": "Contato",
     "skill": "Habilidades",
     "func": "Funcionalidades",
-    "login": "Login"
+    "login": "Login",
+    "logout": "Logout"
   },
   "footer": {
     "text": "Desenvolvido por {name} @{year}"

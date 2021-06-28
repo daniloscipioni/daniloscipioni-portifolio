@@ -12,6 +12,10 @@ const mutations = {
   DEFINIR_USUARIO_LOGADO (state, { token, user }) {
     state.token = token
     state.user = user
+  },
+  DESLOGAR_USUARIO (state) {
+    state.token = null
+    state.user = {}
   }
 }
 

@@ -1,11 +1,13 @@
 <template>
-      <ul class="menu-lista">
-        <li class="menu-item" v-for="rota in rotas" :key="rota.path">
-          <router-link :to="rota.path ? rota.path : '/'" class="menu-link" v-if="rota.meta">
+<div>
+      <ul class="menu-lista" >
+        <li class="menu-item" v-for="rota in rotas" :key="rota.path" v-if="rota.meta" >
+          <router-link :to="rota.path ? rota.path : '/'" class="menu-link" >
             {{ $t(rota.title) }}</router-link
           >
         </li>
       </ul>
+</div>
 </template>
 
 <script>

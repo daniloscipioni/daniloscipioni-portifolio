@@ -12,19 +12,19 @@ export default {
 
   name: 'locale-changer',
   data () {
-    return { 
+    return {
 
-     }
+    }
   },
-  computed:{
-    langs(){
-      return { langs: [['pt-br', i18n.t('portuguese') ],['en',  i18n.t('english')]] }
-    },
+  computed: {
+    langs () {
+      return { langs: [['pt-br', i18n.t('portuguese')], ['en', i18n.t('english')]] }
+    }
 
   },
-  methods:{
-    changeLang(){
-      return this.langs.langs;
+  methods: {
+    changeLang () {
+      return this.langs.langs
     }
   }
 }

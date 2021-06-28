@@ -2,7 +2,9 @@
   <header class="cabecalho">
     <header-logged :rotas=rotas v-if="userIsLogged" />
     <header-not-logged :rotas=rotas v-else/>
+    <a href="#">Sair</a> 
     <locale-changer />
+    
   </header>
 </template>
 
