@@ -2,9 +2,10 @@
   <header class="cabecalho">
     <header-logged :rotas=rotas v-if="userIsLogged" />
     <header-not-logged :rotas=rotas v-else/>
-    <a href="#">Sair</a> 
+    <div>
+      <a href="#" v-on:click="efetuarLogout"> Sair</a>
+    </div>
     <locale-changer />
-    
   </header>
 </template>
 
@@ -13,8 +14,11 @@ import ChangeLang from '../select/ChangeLang.vue'
 import HeaderLogged from '../header/HeaderLogged.vue'
 import HeaderNotLogged from '../header/HeaderNotLogged.vue'
 import { mapGetters } from 'vuex'
+import logoutMixin from '../../../mixins'
 
 export default {
+  name: 'Header',
+  mixins: [logoutMixin],
   components: {
     'locale-changer': ChangeLang,
     'header-logged': HeaderLogged,
