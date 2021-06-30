@@ -2,9 +2,8 @@
   <header class="cabecalho">
     <header-logged :rotas="rotas" v-if="userIsLogged" />
     <header-not-logged :rotas="rotas" v-else/>
-    
     <span class="group">
-     <div v-on:click="efetuarLogout" class="image-logout"></div>
+     <div v-on:click="efetuarLogout" class="image-logout" v-if="userIsLogged" :title="$t('header.logout')"></div>
      <locale-changer class="locale"/>
     </span>
   </header>
@@ -30,6 +29,7 @@ export default {
   },
   data () {
     return {
+
     }
   },
 
