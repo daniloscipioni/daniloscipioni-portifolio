@@ -1,9 +1,12 @@
 <template>
   <header class="cabecalho">
-    <header-logged :rotas=rotas v-if="userIsLogged" />
-    <header-not-logged :rotas=rotas v-else/>
-     <div v-on:click="efetuarLogout" class="image-test"></div>
-    <locale-changer />
+    <header-logged :rotas="rotas" v-if="userIsLogged" />
+    <header-not-logged :rotas="rotas" v-else/>
+    
+    <span class="group">
+     <div v-on:click="efetuarLogout" class="image-logout"></div>
+     <locale-changer class="locale"/>
+    </span>
   </header>
 </template>
 
@@ -20,7 +23,7 @@ export default {
   components: {
     'locale-changer': ChangeLang,
     'header-logged': HeaderLogged,
-    'header-not-logged': HeaderNotLogged
+    'header-not-logged': HeaderNotLogged,
   },
   computed: {
     ...mapGetters(['userIsLogged'])
@@ -48,7 +51,9 @@ export default {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-
+.cabecalho .group{
+  display: flex;
+}
 .menu {
   display: flex;
 }
@@ -81,21 +86,28 @@ export default {
   text-decoration: underline;
 }
 
-.image-test {
+.image-logout {
   background-image: url('./images/logout.png');
   width: 25px;
   height:25px;
   background-repeat: no-repeat;
   background-size: auto;
+  padding-right: 20px;
+  border-right: solid 1px #808080;
 
 }
-.image-test:hover {
+.image-logout:hover {
   background-image: url('./images/logout_dark.png');
   cursor: pointer;
   width: 25px;
   height:25px;
   background-repeat: no-repeat;
   background-size: auto;
+  padding-right: 20px;
+}
+
+.locale{
+  padding-left:10px;
 }
 
 @media screen and (min-width: 0) {

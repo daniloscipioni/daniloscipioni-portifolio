@@ -35,5 +35,6 @@ export default {
     border: 0;
     background-color: inherit;
     color: #808080;
+    padding-left: 20px;
 }
 </style>
