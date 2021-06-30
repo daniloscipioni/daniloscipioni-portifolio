@@ -2,7 +2,7 @@
   <header class="cabecalho">
     <header-logged :rotas=rotas v-if="userIsLogged" />
     <header-not-logged :rotas=rotas v-else/>
-     <img :src="url" :alt="titulo" v-on:click="efetuarLogout">
+     <div v-on:click="efetuarLogout" class="image-test"></div>
     <locale-changer />
   </header>
 </template>
@@ -27,8 +27,6 @@ export default {
   },
   data () {
     return {
-      url: require('./images/logout.png'),
-      titulo: 'Logout'
     }
   },
 
@@ -81,6 +79,23 @@ export default {
 
 .menu-link:hover {
   text-decoration: underline;
+}
+
+.image-test {
+  background-image: url('./images/logout.png');
+  width: 25px;
+  height:25px;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+.image-test:hover {
+  background-image: url('./images/logout_dark.png');
+  cursor: pointer;
+  width: 25px;
+  height:25px;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 @media screen and (min-width: 0) {
