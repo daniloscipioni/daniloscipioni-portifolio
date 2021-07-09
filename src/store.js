@@ -1,6 +1,7 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
 import http from '@/http'
+import { asyncLoading } from 'vuejs-loading-plugin'
 Vue.use(Vuex)
 
 const estado = {
@@ -21,7 +22,7 @@ const mutations = {
 
 const actions = {
   efetuarLogin ({ commit }, user) {
-    return new Promise((resolve, reject) => {
+    const login = new Promise((resolve, reject) => {
       http.post('/login', user)
         .then(response => {
           console.log(response.data)
@@ -36,6 +37,9 @@ const actions = {
           reject(err)
         })
     })
+    // loading no login
+    asyncLoading(login).then().catch()
+    return login
   }
 }
 

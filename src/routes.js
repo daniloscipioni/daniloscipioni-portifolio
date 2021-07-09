@@ -8,9 +8,9 @@ import LoginAccess from './components/login/LoginAccess.vue'
 export const routes = [
 
   { path: '', component: Home, title: 'header.home', meta: { public: true } },
-  { path: '/contact', component: Contact, title: 'header.contact', meta: { public: true } },
+  { path: '/contact', component: Contact, title: 'header.contact' },
   { path: '/skill', component: Skill, title: 'header.skill' },
-  { path: '/funcionalidades', component: Func, title: 'header.func', meta: { public: true } },
+  { path: '/funcionalidades', component: Func, title: 'header.func' },
   { path: '/login', component: LoginAccess, title: 'header.login', meta: { public: true }, login: { public: false } },
 
 ]
