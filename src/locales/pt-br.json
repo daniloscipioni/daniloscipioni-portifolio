@@ -26,6 +26,8 @@
     "create":"Criar",
     "name":"Nome",
     "email-address":"Endereço de e-mail",
-    "error-message": "Usuário ou senha incorretos! Tente novamente."
+    "error-message-login": "Usuário ou senha incorretos! Tente novamente.",
+    "error-message-register": "Usuário ou e-mail já cadastrados! Tente novamente",
+    "success-message-register": "Usuário registrado com sucesso!"
   } 
 }

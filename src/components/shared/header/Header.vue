@@ -22,7 +22,7 @@ export default {
   components: {
     'locale-changer': ChangeLang,
     'header-logged': HeaderLogged,
-    'header-not-logged': HeaderNotLogged,
+    'header-not-logged': HeaderNotLogged
   },
   computed: {
     ...mapGetters(['userIsLogged'])

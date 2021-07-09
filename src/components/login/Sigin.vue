@@ -38,12 +38,14 @@ export default {
       this.$store
         .dispatch('efetuarLogin', this.user)
         .then((data) => {
-          // this.$router.push({ path: '/contact' })
+          this.$router.push({ path: '/' })
           this.errorMessage = ''
+          this.user = {}
         })
         .catch((err) => {
           if (err.request.status === 401) {
-            this.errorMessage = this.$t('login-register.error-message')
+            this.errorMessage = this.$t('login-register.error-message-login')
+            this.user = {}
           }
         })
     }

@@ -26,6 +26,8 @@
      "create":"Create",
      "name":"Name",
      "email-address":"Email Address",
-     "error-message": "User or password is incorrect! Try again."
+     "error-message-login": "User or password is incorrect! Try again.",
+     "error-message-register": "Username or e-mail already registered! Try again",
+     "success-message-register": "User registered successfully!"
    } 
 }
