@@ -4,10 +4,23 @@ import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import { routes } from './routes'
 import i18n from './i18n'
-import http from 'http'
 import store from '@/store'
+import VueLoading from 'vuejs-loading-plugin'
 
 Vue.use(VueRouter)
+
+// using default options
+//Vue.use(VueLoading)
+
+// overwrite defaults
+Vue.use(VueLoading, {
+  //dark: true, // default false
+  text: 'Loading / Carregando', // default 'Loading'
+  //loading: true, // default false
+  //customLoader: myVueComponent, // replaces the spinner and text with your own
+  //background: 'rgb(255,255,255)', // set custom background
+  //classes: ['myclass'] // array, object or string
+})
 
 Vue.config.productionTip = false
 
@@ -30,5 +43,6 @@ new Vue({
   router,
   store,
   i18n,
-  render: h => h(App)
+  render: h => h(App),
+  VueLoading
 }).$mount('#app')
