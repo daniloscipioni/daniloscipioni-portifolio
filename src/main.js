@@ -6,11 +6,16 @@ import { routes } from './routes'
 import i18n from './i18n'
 import store from '@/store'
 import VueLoading from 'vuejs-loading-plugin'
+import { MdButton, MdContent, MdTabs, MdCard, MdIcon } from 'vue-material/dist/components'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
 
 Vue.use(VueRouter)
-
-// using default options
-//Vue.use(VueLoading)
+Vue.use(MdButton)
+Vue.use(MdContent)
+Vue.use(MdTabs)
+Vue.use(MdCard)
+Vue.use(MdIcon)
 
 // overwrite defaults
 Vue.use(VueLoading, {
