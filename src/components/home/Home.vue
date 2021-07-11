@@ -4,16 +4,16 @@
     {{updatedNews}}
     <section class="home">
       <meu-banner :url="url" :titulo="titulo" />
-      <div class="cards" v-for="item in news.valor">
+      <div class="cards" v-for="item in news.valor" :key="item.date">
         <meu-card :title=item.title :date=item.date :content=item.content :link=item.link source='Valor.com' />
       </div>
-      <div class="cards" v-for="item in news.g1">
+      <div class="cards" v-for="item in news.g1" :key="item.date">
         <meu-card :title=item.title :date=item.date :content=item.content :link=item.link source='G1.com' />
       </div>
-      <div class="cards" v-for="item in news.wired">
+      <div class="cards" v-for="item in news.wired" :key="item.date">
         <meu-card :title=item.title :date=item.date :content=item.content :link=item.link source='Wired.com'/>
       </div>
-      <div class="cards" v-for="item in news.theguardian">
+      <div class="cards" v-for="item in news.theguardian" :key="item.date">
         <meu-card :title=item.title :date=item.date :content=item.content :link=item.link source='TheGuardian.com' />
       </div>
       <h1>Home</h1>
