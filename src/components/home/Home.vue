@@ -1,18 +1,23 @@
 
 <template>
   <div>
-
+    {{updatedNews}}
     <section class="home">
       <meu-banner :url="url" :titulo="titulo" />
-      <div class="cards">
-        <meu-card  />
-      <meu-card  />
-      <meu-card  />
+      <div class="cards" v-for="item in news.valor">
+        <meu-card :title=item.title :date=item.date :content=item.content :link=item.link source='Valor.com' />
       </div>
-      
+      <div class="cards" v-for="item in news.g1">
+        <meu-card :title=item.title :date=item.date :content=item.content :link=item.link source='G1.com' />
+      </div>
+      <div class="cards" v-for="item in news.wired">
+        <meu-card :title=item.title :date=item.date :content=item.content :link=item.link source='Wired.com'/>
+      </div>
+      <div class="cards" v-for="item in news.theguardian">
+        <meu-card :title=item.title :date=item.date :content=item.content :link=item.link source='TheGuardian.com' />
+      </div>
       <h1>Home</h1>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos culpa veritatis reprehenderit veniam, accusantium neque, itaque illo sit, iusto maiores minima voluptatibus fugit perspiciatis assumenda quam alias voluptas. Pariatur, consectetur.
-
     </section>
      </div>
 
@@ -24,17 +29,53 @@ import Card from '../shared/card/Card.vue'
 export default {
   components: {
     'meu-banner': Banner,
-    'meu-card' : Card
+    'meu-card': Card
   },
 
   data () {
     return {
       url: require('@/assets/images/banner_home.jpg'),
-      titulo: 'Home'
+      titulo: 'Home',
+      news: [],
     }
   },
-  computed: {},
-  methods: {},
+  computed: {
+      // uma função "getter" computada (computed getter)
+    updatedNews: function () {
+      // `this` aponta para a instância Vue da variável `vm`
+    
+      return this.updateNews()
+    }
+  },
+    watch: {
+      // sempre que a pergunta mudar, essa função será executada
+    // news: function () {
+    //   return this.updateNews()
+    //   //this.debouncedGetAnswer()
+    // },
+
+    },
+  methods: {
+    updateNews: function () {
+     
+          //this.fullName = val + ' ' + this.lastName
+           this.$store.dispatch('searchNews')
+        .then((data) => {
+          // this.$router.push({ path: '/' })
+          this.news = data.data
+        })
+        .catch((err) => {
+          // if (err.request.status === 401) {
+          //   this.errorMessage = this.$t('login-register.error-message-login')
+          //   this.user = {}
+          // }
+          console.log(err)
+        })
+        
+    }
+      //   return this.news;
+  //  }
+  },
 
   created () {
 

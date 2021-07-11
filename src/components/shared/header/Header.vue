@@ -70,8 +70,8 @@ export default {
   margin-right: 0;
 }
 
-.menu-link {
-  color: #808080;
+.menu-link  {
+  color: #808080 !important;
   margin-right: 1.25rem;
   text-decoration: none;
   text-transform: capitalize;

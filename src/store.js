@@ -6,7 +6,8 @@ Vue.use(Vuex)
 
 const estado = {
   token: null,
-  user: {}
+  user: {},
+  news: {}
 }
 
 const mutations = {
@@ -17,6 +18,9 @@ const mutations = {
   DESLOGAR_USUARIO (state) {
     state.token = null
     state.user = {}
+  },
+  UPDATE_NEWS (state) {
+    state.news = null
   }
 }
 
@@ -40,7 +44,26 @@ const actions = {
     // loading no login
     asyncLoading(login).then().catch()
     return login
+  },
+
+  searchNews ({ commit }) {
+    
+    const newsUpdate = new Promise((resolve, reject) => {
+      http.get('/rss')
+        .then(response => {
+          commit('UPDATE_NEWS', {
+            news: response.data
+          })
+          resolve(response.data)
+        })
+        .catch(err => {
+          console.log(err)
+          reject(err)
+        })
+    })
+    return newsUpdate
   }
+
 }
 
 const getters = {
