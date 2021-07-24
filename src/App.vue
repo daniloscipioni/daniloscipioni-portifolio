@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <meu-header :rotas="routes"/>
+    <hr class="line">
     <transition name="pagina">
       <router-view class="principal"></router-view>
     </transition>
@@ -24,7 +25,7 @@ export default {
     return {
       routes
     }
-  },
+  }
 }
 </script>
 
@@ -34,5 +35,8 @@ export default {
 
 .principal{
   height: 100%;
+}
+.line{
+  width: 95%;
 }
 </style>
