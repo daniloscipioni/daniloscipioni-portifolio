@@ -1,7 +1,5 @@
 
 <template>
-  <div>
-    {{ updatedNews }}
     <div class="home">
       <!-- <meu-banner :url="url" :titulo="titulo" /> -->
       <div class="main-view">
@@ -12,54 +10,20 @@
         alias voluptas. Pariatur, consectetur.
       </div>
       <div class="side-news">
-        <div class="cards" v-for="item in news.valor" :key="item.date">
-          <meu-card
-            :title="item.title"
-            :date="item.date"
-            :content="item.content"
-            :link="item.link"
-            source="Valor.com"
-          />
-        </div>
-        <div class="cards" v-for="item in news.g1" :key="item.date">
-          <meu-card
-            :title="item.title"
-            :date="item.date"
-            :content="item.content"
-            :link="item.link"
-            source="G1.com"
-          />
-        </div>
-        <div class="cards" v-for="item in news.wired" :key="item.date">
-          <meu-card
-            :title="item.title"
-            :date="item.date"
-            :content="item.content"
-            :link="item.link"
-            source="Wired.com"
-          />
-        </div>
-        <div class="cards" v-for="item in news.theguardian" :key="item.date">
-          <meu-card
-            :title="item.title"
-            :date="item.date"
-            :content="item.content"
-            :link="item.link"
-            source="TheGuardian.com"
-          />
-        </div>
-      </div>
+        <meu-news />
     </div>
   </div>
 </template>
 
 <script>
-import Banner from '../banner/Banner.vue'
-import Card from '../shared/card/Card.vue'
+// import Banner from '../banner/Banner.vue'
+// import Card from '../shared/card/Card.vue'
+import News from '../news/News.vue'
 export default {
   components: {
-    'meu-banner': Banner,
-    'meu-card': Card
+    // 'meu-banner': Banner,
+    // 'meu-card': Card,
+    'meu-news': News
   },
 
   data () {
@@ -69,14 +33,11 @@ export default {
       news: []
     }
   },
-  computed: {
-    // uma função "getter" computada (computed getter)
-    updatedNews: function () {
-      // `this` aponta para a instância Vue da variável `vm`
-
-      return this.updateNews()
-    }
-  },
+  // computed: {
+  //   updatedNews: function () {
+  //     return this.updateNews()
+  //   }
+  // },
   watch: {
     // sempre que a pergunta mudar, essa função será executada
     // news: function () {
@@ -85,22 +46,23 @@ export default {
     // },
   },
   methods: {
-    updateNews: function () {
-      // this.fullName = val + ' ' + this.lastName
-      this.$store
-        .dispatch('searchNews')
-        .then((data) => {
-          // this.$router.push({ path: '/' })
-          this.news = data.data
-        })
-        .catch((err) => {
-          // if (err.request.status === 401) {
-          //   this.errorMessage = this.$t('login-register.error-message-login')
-          //   this.user = {}
-          // }
-          console.log(err)
-        })
-    }
+    // updateNews: function () {
+    //   // this.fullName = val + ' ' + this.lastName
+    //   this.$store
+    //     .dispatch('searchNews')
+    //     .then((data) => {
+    //       // this.$router.push({ path: '/' })
+
+    //       this.news = data.data
+    //     })
+    //     .catch((err) => {
+    //       // if (err.request.status === 401) {
+    //       //   this.errorMessage = this.$t('login-register.error-message-login')
+    //       //   this.user = {}
+    //       // }
+    //       console.log(err)
+    //     })
+    // }
     //   return this.news;
     //  }
   },
@@ -117,9 +79,6 @@ export default {
 .main-view {
   text-align: justify;
   padding-right: 2rem;
-}
-.cards {
-  display: inline-flex;
 }
 
 .side-news {

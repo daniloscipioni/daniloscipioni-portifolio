@@ -19,12 +19,12 @@ Vue.use(MdIcon)
 
 // overwrite defaults
 Vue.use(VueLoading, {
-  //dark: true, // default false
-  text: 'Loading / Carregando', // default 'Loading'
-  //loading: true, // default false
-  //customLoader: myVueComponent, // replaces the spinner and text with your own
-  //background: 'rgb(255,255,255)', // set custom background
-  //classes: ['myclass'] // array, object or string
+  // dark: true, // default false
+  text: 'Loading / Carregando' // default 'Loading'
+  // loading: true, // default false
+  // customLoader: myVueComponent, // replaces the spinner and text with your own
+  // background: 'rgb(255,255,255)', // set custom background
+  // classes: ['myclass'] // array, object or string
 })
 
 Vue.config.productionTip = false

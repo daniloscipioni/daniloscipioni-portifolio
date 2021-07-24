@@ -47,7 +47,6 @@ const actions = {
   },
 
   searchNews ({ commit }) {
-    
     const newsUpdate = new Promise((resolve, reject) => {
       http.get('/rss')
         .then(response => {
@@ -61,6 +60,7 @@ const actions = {
           reject(err)
         })
     })
+    asyncLoading(newsUpdate).then().catch()
     return newsUpdate
   }
 
