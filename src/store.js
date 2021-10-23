@@ -67,7 +67,8 @@ const actions = {
 }
 
 const getters = {
-  userIsLogged: state => Boolean(state.token)
+  userIsLogged: state => Boolean(state.token),
+  activeUser: state => Object(state.user)
 }
 
 export default new Vuex.Store({

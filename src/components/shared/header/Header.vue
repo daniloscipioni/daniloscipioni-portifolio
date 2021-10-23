@@ -3,8 +3,13 @@
     <header-logged :rotas="rotas" v-if="userIsLogged" />
     <header-not-logged :rotas="rotas" v-else/>
     <span class="group">
+      <div>
      <div v-on:click="efetuarLogout" class="image-logout" v-if="userIsLogged" :title="$t('header.logout')"></div>
      <locale-changer class="locale"/>
+      </div>
+       <div>
+     <profile-avatar :user="activeUser" v-if="userIsLogged" />
+    </div>
     </span>
   </header>
 </template>
@@ -15,6 +20,7 @@ import HeaderLogged from '../header/HeaderLogged.vue'
 import HeaderNotLogged from '../header/HeaderNotLogged.vue'
 import { mapGetters } from 'vuex'
 import logoutMixin from '../../../mixins'
+import Profile from '../profile/Profile.vue'
 
 export default {
   name: 'Header',
@@ -22,14 +28,15 @@ export default {
   components: {
     'locale-changer': ChangeLang,
     'header-logged': HeaderLogged,
-    'header-not-logged': HeaderNotLogged
+    'header-not-logged': HeaderNotLogged,
+    'profile-avatar': Profile
   },
   computed: {
-    ...mapGetters(['userIsLogged'])
+    ...mapGetters(['userIsLogged']),
+    ...mapGetters(['activeUser'])
   },
   data () {
     return {
-
     }
   },
 
@@ -92,7 +99,7 @@ export default {
   height:25px;
   background-repeat: no-repeat;
   background-size: auto;
-  padding-right: 20px;
+  padding-right: 50px;
   border-right: solid 1px #808080;
 
 }
@@ -103,7 +110,7 @@ export default {
   height:25px;
   background-repeat: no-repeat;
   background-size: auto;
-  padding-right: 20px;
+  padding-right: 50px;
 }
 
 .locale{

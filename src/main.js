@@ -7,8 +7,19 @@ import i18n from './i18n'
 import store from '@/store'
 import VueLoading from 'vuejs-loading-plugin'
 import { MdButton, MdContent, MdTabs, MdCard, MdIcon } from 'vue-material/dist/components'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
+
+// Import Bootstrap an BootstrapVue CSS files (order is important)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+// Make BootstrapVue available throughout your project
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
 
 Vue.use(VueRouter)
 Vue.use(MdButton)

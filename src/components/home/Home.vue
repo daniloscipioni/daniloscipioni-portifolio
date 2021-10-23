@@ -10,7 +10,7 @@
         alias voluptas. Pariatur, consectetur.
       </div>
       <div class="side-news">
-        <meu-news />
+        <!-- <meu-news /> -->
     </div>
   </div>
 </template>
@@ -18,12 +18,12 @@
 <script>
 // import Banner from '../banner/Banner.vue'
 // import Card from '../shared/card/Card.vue'
-import News from '../news/News.vue'
+// import News from '../news/News.vue'
 export default {
   components: {
     // 'meu-banner': Banner,
     // 'meu-card': Card,
-    'meu-news': News
+    // 'meu-news': News
   },
 
   data () {

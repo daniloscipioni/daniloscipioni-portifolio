@@ -1,6 +1,7 @@
 <template>
 <div>
   <form @submit.prevent="createNewUser" class="register-form">
+    <input type="text" :placeholder="$t('login-register.nmuser')" v-model="user.nmuser"/>
     <input type="text" :placeholder="$t('login-register.username')" v-model="user.username"/>
     <input type="password" :placeholder="$t('login-register.password')" v-model="user.password" />
     <input type="text" :placeholder="$t('login-register.email-address')" v-model="user.email"/>

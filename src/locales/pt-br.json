@@ -17,6 +17,7 @@
     "text": "Desenvolvido por {name} @{year}"
   },
   "login-register":{
+    "nmuser": "Nome do usário",
     "username":"usuário",
     "password":"senha",
     "not-registered":"Não é registrado?",
