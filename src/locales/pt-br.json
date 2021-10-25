@@ -11,7 +11,9 @@
     "skill": "Habilidades",
     "func": "Funcionalidades",
     "login": "Login",
-    "logout": "Logout"
+    "logout": "Logout",
+    "close" : "Fechar",
+    "profile" : "Perfil"
   },
   "footer": {
     "text": "Desenvolvido por {name} @{year}"

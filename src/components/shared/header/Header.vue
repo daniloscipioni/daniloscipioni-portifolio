@@ -3,8 +3,7 @@
     <header-logged :rotas="rotas" v-if="userIsLogged" />
     <header-not-logged :rotas="rotas" v-else/>
     <span class="group">
-      <div>
-     <div v-on:click="efetuarLogout" class="image-logout" v-if="userIsLogged" :title="$t('header.logout')"></div>
+      <div style="display: flex;align-items: center;padding-right: 25px;">
      <locale-changer class="locale"/>
       </div>
        <div>

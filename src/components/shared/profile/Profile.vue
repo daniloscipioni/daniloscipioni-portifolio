@@ -31,23 +31,28 @@
     >
       <template #title>
         <div>
-          <span>
-        <a @click="onClose">close</a>
-        </span>
-        <span>
-        <a v-on:click="efetuarLogout">Logout</a>
-        </span>
+         {{$t('header.profile')}}
         </div>
        
       </template>
 
-      <div style="display:flex;">
-        <div>
-        <b-avatar size="72px"></b-avatar>
-        </div>
-        <div>
-            {{user.nm_user}}
-            {{user.email}}
+      <div>
+            <div style="display:flex;">
+                  <div>
+                  <b-avatar size="72px"></b-avatar>
+                  </div>
+                  <div>
+                      {{user.nm_user}}
+                      {{user.email}}
+                  </div>
+            </div>
+        <div style="display:flex;">
+          <div style="text-align: start;width: 50%;">
+            <a @click="efetuarLogout" style="cursor:pointer;">{{$t('header.logout')}}</a>
+          </div>
+          <div style="text-align: end;width: 50%;">
+            <a @click="onClose" style="cursor:pointer;">{{$t('header.close')}}</a>
+          </div>
         </div>
       </div>
     </b-popover>
