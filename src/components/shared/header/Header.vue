@@ -8,7 +8,7 @@
      <locale-changer class="locale"/>
       </div>
        <div>
-     <profile-avatar :user="activeUser" v-if="userIsLogged" />
+     <profile :user="activeUser" v-if="userIsLogged" />
     </div>
     </span>
   </header>
@@ -29,7 +29,7 @@ export default {
     'locale-changer': ChangeLang,
     'header-logged': HeaderLogged,
     'header-not-logged': HeaderNotLogged,
-    'profile-avatar': Profile
+    'profile': Profile
   },
   computed: {
     ...mapGetters(['userIsLogged']),
