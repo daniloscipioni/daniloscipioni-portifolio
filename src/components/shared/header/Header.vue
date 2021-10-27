@@ -56,6 +56,7 @@ export default {
   justify-content: space-between;
   padding-left: 2rem;
   padding-right: 2rem;
+  height: 72px;
 }
 .cabecalho .group{
   display: flex;
@@ -66,6 +67,7 @@ export default {
 
 .menu-lista {
   display: flex;
+  margin-bottom: 0;
 }
 
 .menu-item {
