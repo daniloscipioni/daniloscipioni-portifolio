@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <meu-header :rotas="routes"/>
-    <hr class="line">
     <transition name="pagina">
       <router-view class="principal"></router-view>
     </transition>
@@ -29,7 +28,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style>
 @import './assets/css/reset.css';
 @import './assets/css/normalize.css';
 
@@ -38,5 +37,42 @@ export default {
 }
 .line{
   width: 95%;
+}
+.home {
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 20px;
+}
+.main-view {
+  text-align: justify;
+  padding-right: 2rem;
+}
+
+.side-news {
+  width: 35%;
+}
+
+@media screen and (min-width: 0) {
+  .home {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .main-view {
+    text-align: justify;
+    padding-right: 0rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    display: flex;
+    height: auto;
+  }
+  .main-view {
+    text-align: justify;
+    padding-right: 2rem;
+  }
 }
 </style>

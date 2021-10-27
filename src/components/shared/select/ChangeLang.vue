@@ -34,7 +34,11 @@ export default {
 .menu-item-select {
     border: 0;
     background-color: inherit;
-    color: #808080;
+    color: white;
     padding-left: 20px;
+}
+.menu-item-select option {
+    color: black;
+   
 }
 </style>

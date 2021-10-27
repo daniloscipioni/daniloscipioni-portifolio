@@ -1,19 +1,20 @@
 <template>
-  <div>
-    <section>
-      <meu-banner :url="url" :titulo="titulo" class="login-banner"/>
-    </section>
-    <login class="login"/>
+  <div class="home">
+      <!-- <meu-banner :url="url" :titulo="titulo" /> -->
+      <div class="main-view" style="position: relative;
+    margin: auto;">
+        <login class="login"/>
+      </div>
   </div>
 </template>
 
 <script>
 
-import Banner from '../banner/Banner.vue'
+//import Banner from '../banner/Banner.vue'
 import Login from '../login/Login.vue'
 export default {
   components: {
-    'meu-banner': Banner,
+   // 'meu-banner': Banner,
     login: Login
   },
 

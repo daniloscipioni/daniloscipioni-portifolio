@@ -51,12 +51,14 @@ export default {
 <style scope>
 .cabecalho {
   align-items: center;
-  background: #f9f9f9;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  height: 72px;
+    background: #24306a;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 145px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
 }
 .cabecalho .group{
   display: flex;
@@ -79,7 +81,7 @@ export default {
 }
 
 .menu-link  {
-  color: #808080 !important;
+  color: white !important;
   margin-right: 1.25rem;
   text-decoration: none;
   text-transform: capitalize;
@@ -161,6 +163,9 @@ export default {
 @media screen and (max-width: 768px) {
   .cabecalho {
     padding-bottom: 0.7em;
+    height: auto;
+    align-items: center;
+    padding-top: 10px;
   }
   .menu-link {
     color: #808080;

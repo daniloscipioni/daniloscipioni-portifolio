@@ -3,7 +3,7 @@
     <div class="home">
       <!-- <meu-banner :url="url" :titulo="titulo" /> -->
       <div class="main-view">
-        <h1>Home</h1>
+        <h1>{{titulo}}</h1>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos culpa
         veritatis reprehenderit veniam, accusantium neque, itaque illo sit,
         iusto maiores minima voluptatibus fugit perspiciatis assumenda quam
@@ -28,7 +28,7 @@ export default {
 
   data () {
     return {
-      url: require('@/assets/images/banner_home.jpg'),
+     // url: require('@/assets/images/banner_home.jpg'),
       titulo: 'Home',
       news: []
     }
@@ -70,41 +70,3 @@ export default {
   created () {}
 }
 </script>
-<style scoped>
-.home {
-  display: flex;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-.main-view {
-  text-align: justify;
-  padding-right: 2rem;
-}
-
-.side-news {
-  width: 35%;
-}
-
-@media screen and (min-width: 0) {
-  .home {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  .main-view {
-    text-align: justify;
-    padding-right: 0rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .home {
-    display: flex;
-    height: auto;
-  }
-  .main-view {
-    text-align: justify;
-    padding-right: 2rem;
-  }
-}
-</style>
