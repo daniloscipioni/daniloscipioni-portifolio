@@ -1,41 +1,41 @@
 <template>
   <div id="app">
-    <meu-header :rotas="routes"/>
+    <meu-header :rotas="routes" />
     <transition name="pagina">
       <router-view class="principal"></router-view>
     </transition>
-    <meu-footer/>
+    <meu-footer />
   </div>
 </template>
 
 <script>
-import { routes } from './routes'
-import Header from './components/shared/header/Header.vue'
-import Footer from './components/shared/footer/Footer.vue'
+import { routes } from "./routes";
+import Header from "./components/shared/header/Header.vue";
+import Footer from "./components/shared/footer/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     // HelloI18n,
-    'meu-header': Header,
-    'meu-footer': Footer
+    "meu-header": Header,
+    "meu-footer": Footer,
   },
-  data () {
+  data() {
     return {
-      routes
-    }
-  }
-}
+      routes,
+    };
+  },
+};
 </script>
 
 <style>
-@import './assets/css/reset.css';
-@import './assets/css/normalize.css';
+@import "./assets/css/reset.css";
+@import "./assets/css/normalize.css";
 
-.principal{
+.principal {
   height: 100%;
 }
-.line{
+.line {
   width: 95%;
 }
 .home {
@@ -51,6 +51,14 @@ export default {
 
 .side-news {
   width: 35%;
+}
+.pagina-enter-active,
+.pagina-leave-active {
+  transition: opacity 0.3s;
+}
+.pagina-enter,
+.pagina-leave-active {
+  opacity: 0;
 }
 
 @media screen and (min-width: 0) {

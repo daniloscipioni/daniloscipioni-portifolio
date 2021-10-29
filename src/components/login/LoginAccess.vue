@@ -1,9 +1,8 @@
 <template>
   <div class="home">
       <!-- <meu-banner :url="url" :titulo="titulo" /> -->
-      <div class="main-view" style="position: relative;
-    margin: auto;">
-        <login class="login"/>
+      <div class="main-view login" >
+        <login />
       </div>
   </div>
 </template>
@@ -20,7 +19,7 @@ export default {
 
   data () {
     return {
-      url: require('@/assets/images/banner_contact.jpg'),
+     // url: require('@/assets/images/banner_contact.jpg'),
       titulo: 'Login'
     }
   },
@@ -39,21 +38,8 @@ export default {
 
 <style scope>
  .login{
-    /* font-family: Pacifico, cursive; */
-    color: black;
-    position: absolute;
-    left: 50%;
-    /* text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75); */
-    top: 200px;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    height: 250px;
-    background-color: white;
-    border-radius: 10px;
+    padding-right: 0px;
+    flex: auto;
 }
 
-.login-banner{
-  position: relative;
-}
 </style>

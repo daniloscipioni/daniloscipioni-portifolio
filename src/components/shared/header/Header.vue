@@ -48,7 +48,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style>
 .cabecalho {
   align-items: center;
     background: #24306a;
@@ -68,12 +68,16 @@ export default {
 }
 
 .menu-lista {
-  display: flex;
-  margin-bottom: 0;
+  /* display: flex;
+  margin-bottom: 0; */
 }
 
 .menu-item {
-  list-style: none;
+  /* list-style: none; */
+}
+
+.menu-item a {
+  /* list-style: none; */
 }
 
 .menu-item:last-child a {
@@ -86,14 +90,16 @@ export default {
   text-decoration: none;
   text-transform: capitalize;
 }
+.menu-lista .menu-link a{
+  text-decoration: none;
+}
+.menu-link:hover {
+  font-size: 20px;
+}
 
 .router-link-exact-active {
   color: #333333;
   font-weight: bold;
-}
-
-.menu-link:hover {
-  text-decoration: underline;
 }
 
 .image-logout {
@@ -115,7 +121,12 @@ export default {
   background-size: auto;
   padding-right: 50px;
 }
-
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none !important;
+}
 .locale{
   padding-left:10px;
 }
@@ -125,6 +136,7 @@ export default {
     display: block;
     text-align: center;
   }
+  
 }
 
 @media screen and (min-width: 768px) {
@@ -139,6 +151,7 @@ export default {
     width: 100%;
     height: 150px;
   }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -168,6 +181,12 @@ export default {
     padding-top: 10px;
   }
   .menu-link {
+    color: #808080;
+    margin-right: 0rem;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  .menu-link:hover {
     color: #808080;
     margin-right: 0rem;
     text-decoration: none;
