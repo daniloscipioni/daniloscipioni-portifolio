@@ -1,7 +1,7 @@
 <template>
   <div id="my-container">
     <div class="my-3">
-      <!-- Our triggering (target) element -->     
+      <!-- Our triggering (target) element -->
       <b-avatar
         button
         variant="primary"
@@ -12,7 +12,6 @@
 
     <!-- Output from the popover interaction -->
     <b-card title="Returned values:" v-if="input1Return && input2Return">
-      
     </b-card>
 
     <!-- Our popover title and content render container -->
@@ -31,27 +30,31 @@
     >
       <template #title>
         <div>
-         {{$t('header.profile')}}
+          {{ $t("header.profile") }}
         </div>
-       
       </template>
 
       <div>
-            <div style="display:flex;">
-                  <div>
-                  <b-avatar size="72px"></b-avatar>
-                  </div>
-                  <div>
-                      {{user.nm_user}}
-                      {{user.email}}
-                  </div>
-            </div>
-        <div style="display:flex;">
-          <div style="text-align: start;width: 50%;">
-            <a @click="efetuarLogout" style="cursor:pointer;">{{$t('header.logout')}}</a>
+        <div style="display: flex">
+          <div>
+            <b-avatar size="72px"></b-avatar>
           </div>
-          <div style="text-align: end;width: 50%;">
-            <a @click="onClose" style="cursor:pointer;">{{$t('header.close')}}</a>
+          <div>
+            {{ user.nm_user }}
+            {{ user.email }}
+            {{ user.last_access }}
+          </div>
+        </div>
+        <div style="display: flex">
+          <div style="text-align: start; width: 50%">
+            <a @click="efetuarLogout" style="cursor: pointer">{{
+              $t("header.logout")
+            }}</a>
+          </div>
+          <div style="text-align: end; width: 50%">
+            <a @click="onClose" style="cursor: pointer">{{
+              $t("header.close")
+            }}</a>
           </div>
         </div>
       </div>
@@ -63,109 +66,47 @@
 import { mapGetters } from 'vuex'
 import logoutMixin from '../../../mixins'
 
-  export default {
-      name: "Profile",
-      mixins: [logoutMixin],
+export default {
+  name: 'Profile',
+  mixins: [logoutMixin],
   props: {
     user: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
-    data() {
-      return {
-        input1: '',
-        input1state: null,
-        input2: '',
-        input2state: null,
-        options: [{ text: '- Choose 1 -', value: '' }, 'Red', 'Green', 'Blue'],
-        input1Return: '',
-        input2Return: '',
-        popoverShow: false
-      }
-    },
-     computed: {
+  data () {
+    return {
+      popoverShow: false
+    }
+  },
+  computed: {
     ...mapGetters(['userIsLogged'])
-    },
-    watch: {
-      input1(val) {
-        if (val) {
-          this.input1state = true
-        }
-      },
-      input2(val) {
-        if (val) {
-          this.input2state = true
+  },
+  watch: {},
+  methods: {
+    // Salva a abreviação do nome do usuário
+    extractAbbrFullName (nmUser) {
+      let fullNameSplitArray = []
+      let abbrUserName = ''
+
+      if (nmUser !== undefined) {
+        fullNameSplitArray = nmUser.trim().split(' ')
+
+        if (fullNameSplitArray.length > 1) {
+          abbrUserName =
+            fullNameSplitArray[0][0] +
+            fullNameSplitArray[fullNameSplitArray.length - 1][0]
+        } else {
+          abbrUserName = fullNameSplitArray[0][0] + fullNameSplitArray[0][1]
         }
       }
+
+      return abbrUserName
     },
-    methods: {
-    extractAbbrFullName(nm_user) {
-
-      let fullNameSplitArray = [];
-      let abbrUserName = "";
-
-      if (nm_user != undefined) {
-        fullNameSplitArray = nm_user.trim().split(" ");
-
-        if(fullNameSplitArray.length > 1){
-          abbrUserName = fullNameSplitArray[0][0] + fullNameSplitArray[fullNameSplitArray.length - 1][0];
-        }else{
-           abbrUserName = fullNameSplitArray[0][0] + fullNameSplitArray[0][1];
-        }
-        
-      }
-
-      return abbrUserName;
-    },
-      onClose() {
-        this.popoverShow = false
-      },
-      onOk() {
-        if (!this.input1) {
-          this.input1state = false
-        }
-        if (!this.input2) {
-          this.input2state = false
-        }
-        if (this.input1 && this.input2) {
-          this.onClose()
-          // Return our popover form results
-          this.input1Return = this.input1
-          this.input2Return = this.input2
-        }
-      },
-      onShow() {
-        // This is called just before the popover is shown
-        // Reset our popover form variables
-        this.input1 = ''
-        this.input2 = ''
-        this.input1state = null
-        this.input2state = null
-        this.input1Return = ''
-        this.input2Return = ''
-      },
-      onShown() {
-        // Called just after the popover has been shown
-        // Transfer focus to the first input
-        this.focusRef(this.$refs.input1)
-      },
-      onHidden() {
-        // Called just after the popover has finished hiding
-        // Bring focus back to the button
-        this.focusRef(this.$refs.button)
-      },
-      focusRef(ref) {
-        // Some references may be a component, functional component, or plain element
-        // This handles that check before focusing, assuming a `focus()` method exists
-        // We do this in a double `$nextTick()` to ensure components have
-        // updated & popover positioned first
-        this.$nextTick(() => {
-          this.$nextTick(() => {
-            ;(ref.$el || ref).focus()
-          })
-        })
-      }
+    onClose () {
+      this.popoverShow = false
     }
   }
+}
 </script>

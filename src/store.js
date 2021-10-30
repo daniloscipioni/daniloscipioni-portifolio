@@ -41,6 +41,9 @@ const actions = {
           reject(err)
         })
     })
+
+
+
     // loading no login
     asyncLoading(login).then().catch()
     return login
