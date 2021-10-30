@@ -10,10 +10,6 @@
       ></b-avatar>
     </div>
 
-    <!-- Output from the popover interaction -->
-    <b-card title="Returned values:" v-if="input1Return && input2Return">
-    </b-card>
-
     <!-- Our popover title and content render container -->
     <!-- We use placement 'auto' so popover fits in the best spot on viewport -->
     <!-- We specify the same container as the trigger button, so that popover is close to button -->
@@ -63,50 +59,53 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import logoutMixin from '../../../mixins'
+import { mapGetters } from "vuex";
+import logoutMixin from "../../../mixins";
 
 export default {
-  name: 'Profile',
+  name: "Profile",
   mixins: [logoutMixin],
   props: {
     user: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
-  data () {
+  data() {
     return {
-      popoverShow: false
-    }
+      popoverShow: false,
+    };
   },
   computed: {
-    ...mapGetters(['userIsLogged'])
+    ...mapGetters(["userIsLogged"]),
   },
   watch: {},
   methods: {
     // Salva a abreviação do nome do usuário
-    extractAbbrFullName (nmUser) {
-      let fullNameSplitArray = []
-      let abbrUserName = ''
+    extractAbbrFullName(nmUser) {
+      let fullNameSplitArray = [];
+      let abbrUserName = "";
 
       if (nmUser !== undefined) {
-        fullNameSplitArray = nmUser.trim().split(' ')
+        fullNameSplitArray = nmUser.trim().split(" ");
 
         if (fullNameSplitArray.length > 1) {
           abbrUserName =
             fullNameSplitArray[0][0] +
-            fullNameSplitArray[fullNameSplitArray.length - 1][0]
+            fullNameSplitArray[fullNameSplitArray.length - 1][0];
         } else {
-          abbrUserName = fullNameSplitArray[0][0] + fullNameSplitArray[0][1]
+          abbrUserName = fullNameSplitArray[0][0] + fullNameSplitArray[0][1];
         }
       }
 
-      return abbrUserName
+      return abbrUserName;
     },
     onClose () {
-      this.popoverShow = false
-    }
-  }
-}
+      this.popoverShow = false;
+    },
+    onShow () {},
+    onShown () {},
+    onHidden () {},
+  },
+};
 </script>

@@ -11,30 +11,36 @@ const estado = {
 }
 
 const mutations = {
-  DEFINIR_USUARIO_LOGADO (state, { token, user }) {
+  DEFINIR_USUARIO_LOGADO(state, { token, user }) {
     state.token = token
     state.user = user
   },
-  DESLOGAR_USUARIO (state) {
+  DESLOGAR_USUARIO(state) {
     state.token = null
     state.user = {}
   },
-  UPDATE_NEWS (state) {
+  UPDATE_NEWS(state) {
     state.news = null
   }
 }
 
 const actions = {
-  efetuarLogin ({ commit }, user) {
+  efetuarLogin({ commit }, user) {
     const login = new Promise((resolve, reject) => {
       http.post('/login', user)
         .then(response => {
-          console.log(response.data)
           commit('DEFINIR_USUARIO_LOGADO', {
             token: response.data.data.authentication.token,
             user: response.data.data.user.data[0]
           })
           resolve(response.data)
+          http.put(`/update/last-access?selectedUser=${response.data.data.user.data[0].user_id}`)
+            .then(response => {
+              console.log(response)
+            })
+            .catch(err => {
+              console.log(err)
+            })
         })
         .catch(err => {
           console.log(err)
@@ -49,7 +55,7 @@ const actions = {
     return login
   },
 
-  searchNews ({ commit }) {
+  searchNews({ commit }) {
     const newsUpdate = new Promise((resolve, reject) => {
       http.get('/rss')
         .then(response => {
