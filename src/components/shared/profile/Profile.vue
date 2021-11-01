@@ -38,14 +38,15 @@
           <div>
             {{ user.nm_user }}
             {{ user.email }}
-            {{ user.last_access }}
+            <br>
+            <span style="font-size:9px;">
+            {{ $t("header.last-access") + " " + dateFormat }}
+            </span>
           </div>
         </div>
         <div style="display: flex">
           <div style="text-align: start; width: 50%">
-            <a @click="efetuarLogout" style="cursor: pointer">{{
-              $t("header.logout")
-            }}</a>
+            <a @click="efetuarLogout" style="cursor: pointer">{{ $t("header.logout") }}</a>
           </div>
           <div style="text-align: end; width: 50%">
             <a @click="onClose" style="cursor: pointer">{{
@@ -54,6 +55,7 @@
           </div>
         </div>
       </div>
+    
     </b-popover>
   </div>
 </template>
@@ -61,6 +63,8 @@
 <script>
 import { mapGetters } from "vuex";
 import logoutMixin from "../../../mixins";
+import moment from 'moment';
+moment.locale('pt-br');
 
 export default {
   name: "Profile",
@@ -74,6 +78,7 @@ export default {
   data() {
     return {
       popoverShow: false,
+      dateFormat: moment(this.user.last_access).format("DD/MM/YYYY HH:mm")
     };
   },
   computed: {
@@ -107,5 +112,8 @@ export default {
     onShown () {},
     onHidden () {},
   },
+  mounted (){
+
+  }
 };
 </script>

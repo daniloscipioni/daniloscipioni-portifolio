@@ -34,9 +34,9 @@ const actions = {
             user: response.data.data.user.data[0]
           })
           resolve(response.data)
-          http.put(`/update/last-access?selectedUser=${response.data.data.user.data[0].user_id}`)
+          http.put(`/update/last-access?idUser=${response.data.data.user.data[0].user_id}`)
             .then(response => {
-              console.log(response)
+              // console.log(response)
             })
             .catch(err => {
               console.log(err)

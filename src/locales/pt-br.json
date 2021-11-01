@@ -13,7 +13,8 @@
     "login": "Login",
     "logout": "Logout",
     "close" : "Fechar",
-    "profile" : "Perfil"
+    "profile" : "Perfil",
+    "last-access" : "Último acesso"
   },
   "footer": {
     "text": "Desenvolvido por {name} @{year}"
