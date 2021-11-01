@@ -2,12 +2,16 @@
   <div>
     <div class="home">
       <div class="main-view">
-    <h1>{{titulo}}</h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos culpa
-        veritatis reprehenderit veniam, accusantium neque, itaque illo sit,
-        iusto maiores minima voluptatibus fugit perspiciatis assumenda quam
-        alias voluptas. Pariatur, consectetur.
-    </div>
+        <h1>{{ titulo }}</h1>
+        <ul>
+          <li>Javascript</li>
+          <li>htmlt</li>
+          <li>csst</li>
+          <li>postgrest</li>
+          <li>sqlservert</li>
+          <li>javat</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -16,20 +20,20 @@
 //import Banner from '../banner/Banner.vue'
 export default {
   components: {
-//    'meu-banner': Banner
+    //    'meu-banner': Banner
   },
 
-  data () {
+  data() {
     return {
-    //  url: require('@/assets/images/banner_skills.jpg'),
-      titulo: 'Habilidades'
-    }
+      //  url: require('@/assets/images/banner_skills.jpg'),
+      titulo: "Habilidades",
+    };
   },
   computed: {},
   methods: {},
 
-  created () {}
-}
+  created() {},
+};
 </script>
 
 <style>

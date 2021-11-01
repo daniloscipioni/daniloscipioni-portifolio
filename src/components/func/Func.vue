@@ -3,10 +3,16 @@
     <div class="home">
       <div class="main-view">
     <h1>{{titulo}}</h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos culpa
-        veritatis reprehenderit veniam, accusantium neque, itaque illo sit,
-        iusto maiores minima voluptatibus fugit perspiciatis assumenda quam
-        alias voluptas. Pariatur, consectetur.
+       Esta área é exclusivamente para apresentar um pouco de como esta plataforma foi desenvolvida
+      <ul>
+        <li>Vue</li>
+        <li>node</li>
+        <li>html</li>
+        <li>css</li>
+        <li>sass</li>
+        <li>heroku</li>
+        <li>postgres</li>
+        </ul>
     </div>
     </div>
   </div>

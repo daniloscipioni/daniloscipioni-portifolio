@@ -3,10 +3,9 @@
     <div class="home">
       <div class="main-view">
         <h1>{{titulo}}</h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos culpa
-        veritatis reprehenderit veniam, accusantium neque, itaque illo sit,
-        iusto maiores minima voluptatibus fugit perspiciatis assumenda quam
-        alias voluptas. Pariatur, consectetur.
+        Github: @daniloscipioni
+        WhatsApp: 11 971266419
+        linkedin: linkedin.com/in/danilo-scipioni-95a74428
       </div>
     </div>
  

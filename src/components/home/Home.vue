@@ -4,10 +4,7 @@
       <!-- <meu-banner :url="url" :titulo="titulo" /> -->
       <div class="main-view">
         <h1>{{titulo}}</h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos culpa
-        veritatis reprehenderit veniam, accusantium neque, itaque illo sit,
-        iusto maiores minima voluptatibus fugit perspiciatis assumenda quam
-        alias voluptas. Pariatur, consectetur.
+        Este portifólio foi criado para falar um pouco das minhas experiencias profissionais e habilidades que adquiri no decorrer da minha carreria profissional.
       </div>
       <div class="side-news">
         <!-- <meu-news /> -->
@@ -33,38 +30,11 @@ export default {
       news: []
     }
   },
-  // computed: {
-  //   updatedNews: function () {
-  //     return this.updateNews()
-  //   }
-  // },
   watch: {
-    // sempre que a pergunta mudar, essa função será executada
-    // news: function () {
-    //   return this.updateNews()
-    //   //this.debouncedGetAnswer()
-    // },
+    
   },
   methods: {
-    // updateNews: function () {
-    //   // this.fullName = val + ' ' + this.lastName
-    //   this.$store
-    //     .dispatch('searchNews')
-    //     .then((data) => {
-    //       // this.$router.push({ path: '/' })
 
-    //       this.news = data.data
-    //     })
-    //     .catch((err) => {
-    //       // if (err.request.status === 401) {
-    //       //   this.errorMessage = this.$t('login-register.error-message-login')
-    //       //   this.user = {}
-    //       // }
-    //       console.log(err)
-    //     })
-    // }
-    //   return this.news;
-    //  }
   },
 
   created () {
