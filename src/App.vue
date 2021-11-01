@@ -61,6 +61,10 @@ export default {
   opacity: 0;
 }
 
+::selection{
+  background-color: #0095ff  !important;
+}
+
 @media screen and (min-width: 0) {
   .home {
     display: block;
