@@ -15,6 +15,7 @@ import 'vue-material/dist/theme/default.css'
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import vuetify from './plugins/vuetify'
 
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
@@ -60,5 +61,6 @@ new Vue({
   store,
   i18n,
   render: h => h(App),
+  vuetify,
   VueLoading
 }).$mount('#app')
