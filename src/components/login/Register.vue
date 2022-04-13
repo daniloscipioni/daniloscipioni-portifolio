@@ -54,5 +54,5 @@ export default {
 }
 </script>
 <style scoped lang="sass">
-  @import "./styles/login-register.scss";
+  @import "./styles/login-register.scss"
 </style>
