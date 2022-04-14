@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+   <div id="app">
     <meu-header :rotas="routes" />
     <transition name="pagina">
       <router-view class="principal"></router-view>
