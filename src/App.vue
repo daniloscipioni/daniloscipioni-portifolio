@@ -1,8 +1,12 @@
 <template>
    <div id="app">
-    <meu-header :rotas="routes" />
-    <transition name="pagina">
-      <router-view class="principal"></router-view>
+     <v-app-bar
+  color="blue"
+  elevation="1"
+></v-app-bar>
+    <!-- <meu-header :rotas="routes" />-->
+    <transition>
+      <router-view></router-view>
     </transition>
     <meu-footer />
   </div>

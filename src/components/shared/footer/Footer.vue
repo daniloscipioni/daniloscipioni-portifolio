@@ -29,8 +29,8 @@ export default {
       fotos: [],
       filtro: "",
       icons: [
-        ["mdi-linkedin", "https://www.linkedin.com/in/danilo-scipioni"],
-        ["mdi-github", "https://github.com/daniloscipioni"],
+        ['mdi-linkedin', 'https://www.linkedin.com/in/danilo-scipioni'],
+        ['mdi-github', 'https://github.com/daniloscipioni'],
       ],
     };
   },
