@@ -1,42 +1,42 @@
 <template>
    <div id="app">
-     <v-app-bar
-  color="blue"
-  elevation="1"
-></v-app-bar>
+     <v-app-bar >
+
+     </v-app-bar>
     <!-- <meu-header :rotas="routes" />-->
     <transition>
-      <router-view></router-view>
-    </transition>
+     <router-view></router-view>
+   </transition>
     <meu-footer />
+
   </div>
 </template>
 
 <script>
-import { routes } from "./routes";
-import Header from "./components/shared/header/Header.vue";
-import Footer from "./components/shared/footer/Footer.vue";
+import { routes } from './routes'
+import Header from './components/shared/header/Header.vue'
+import Footer from './components/shared/footer/Footer.vue'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     // HelloI18n,
-    "meu-header": Header,
-    "meu-footer": Footer,
+    'meu-header': Header,
+    'meu-footer': Footer
   },
-  data() {
+  data () {
     return {
-      routes,
-    };
-  },
-};
+      routes
+    }
+  }
+}
 </script>
 
 <style>
 @import "./assets/css/reset.css";
 @import "./assets/css/normalize.css";
 
-.principal {
+ .principal {
   height: 100%;
 }
 .line {

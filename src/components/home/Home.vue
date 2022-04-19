@@ -1,12 +1,12 @@
 
 <template>
-    <div class="home">
+    <div>
       <!-- <meu-banner :url="url" :titulo="titulo" /> -->
-      <div class="main-view">
+      <div>
         <h1>{{titulo}}</h1>
         Este portifólio foi criado para falar um pouco das minhas experiencias profissionais e habilidades que adquiri no decorrer da minha carreria profissional.
       </div>
-      <div class="side-news">
+      <div >
         <!-- <meu-news /> -->
     </div>
   </div>
@@ -31,14 +31,14 @@ export default {
     }
   },
   watch: {
-    
+
   },
   methods: {
 
   },
 
   created () {
-  
+
   }
 }
 </script>
