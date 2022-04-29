@@ -1,13 +1,8 @@
 <template>
    <div id="app">
-     <v-app-bar >
 
-     </v-app-bar>
-    <!-- <meu-header :rotas="routes" />-->
-    <transition>
+     <meu-header :rotas="routes" />
      <router-view></router-view>
-   </transition>
-    <meu-footer />
 
   </div>
 </template>
