@@ -5,9 +5,7 @@
         <v-list>
           <v-list-item class="px-2">
             <v-list-item-avatar>
-              <v-img
-                src=""
-              ></v-img>
+              <v-img src=""></v-img>
             </v-list-item-avatar>
           </v-list-item>
 
@@ -24,13 +22,15 @@
         <v-divider></v-divider>
 
         <v-list nav dense>
-          <v-list-item  link v-for="rota in rotas" :key="rota.key">
+          <v-list-item link v-for="rota in rotas" :key="rota.key">
             <v-list-item-icon>
-              <v-icon>mdi-home
-
-              </v-icon>
+              <v-icon>mdi-home </v-icon>
             </v-list-item-icon>
-            <v-list-item-title>{{rota.title}}</v-list-item-title>
+            <v-list-item-title>
+              <router-link class="routerLink" :to="rota.path" >{{
+                rota.title
+              }}</router-link>
+            </v-list-item-title>
           </v-list-item>
         </v-list>
       </v-navigation-drawer>
@@ -41,7 +41,15 @@
 export default {
   name: "Header",
   props: {
-    rotas: Array
+    rotas: Array,
   },
 };
 </script>
+<style scoped>
+
+.md-theme-default a:not(.md-button) {
+   color: rgb(117 117 117);
+   text-decoration: none;
+    /* color: var(--md-theme-default-primary-on-background, #448aff); */
+}
+</style>
