@@ -24,12 +24,12 @@
         <v-list nav dense>
           <v-list-item link v-for="rota in rotas" :key="rota.key">
             <v-list-item-icon>
-              <v-icon>mdi-home </v-icon>
+              <v-icon>{{rota.icon}} </v-icon>
             </v-list-item-icon>
             <v-list-item-title>
-              <router-link class="routerLink" :to="rota.path" >{{
-                rota.title
-              }}</router-link>
+              <router-link class="routerLink" :to="rota.path" >
+              {{$t(rota.title)}}
+              </router-link>
             </v-list-item-title>
           </v-list-item>
         </v-list>
