@@ -5,7 +5,9 @@
         <v-list>
           <v-list-item class="px-2">
             <v-list-item-avatar>
-              <v-img src=""></v-img>
+              <v-img
+                :src="profileUrl"
+              ></v-img>
             </v-list-item-avatar>
           </v-list-item>
 
@@ -40,6 +42,11 @@
 <script>
 export default {
   name: "Header",
+  data () {
+    return {
+      profileUrl: require('@/assets/images/profile_photo.jpg')
+    }
+  },
   props: {
     rotas: Array,
   },
