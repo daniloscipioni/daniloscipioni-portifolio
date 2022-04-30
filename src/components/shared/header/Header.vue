@@ -23,12 +23,12 @@
 
         <v-list nav dense>
           <v-list-item link v-for="rota in rotas" :key="rota.key">
-            <v-list-item-icon>
-              <v-icon>{{rota.icon}} </v-icon>
-            </v-list-item-icon>
             <v-list-item-title>
-              <router-link class="routerLink" :to="rota.path" >
-              {{$t(rota.title)}}
+              <router-link class="routerLink" :to="rota.path">
+                <v-list-item-icon>
+                  <v-icon>{{ rota.icon }} </v-icon>
+                </v-list-item-icon>
+                {{ $t(rota.title) }}
               </router-link>
             </v-list-item-title>
           </v-list-item>
@@ -46,10 +46,9 @@ export default {
 };
 </script>
 <style scoped>
-
 .md-theme-default a:not(.md-button) {
-   color: rgb(117 117 117);
-   text-decoration: none;
-    /* color: var(--md-theme-default-primary-on-background, #448aff); */
+  color: rgb(117 117 117);
+  text-decoration: none;
+  /* color: var(--md-theme-default-primary-on-background, #448aff); */
 }
 </style>
