@@ -1,5 +1,5 @@
 <template>
-  <div class="login-page">
+  <div>
     <div class="form">
       <sigin v-if="signin" @registerOrSignin="registerOrSignin"/>
       <register v-if="!signin" @registerOrSignin="registerOrSignin"/>
@@ -42,5 +42,5 @@ export default {
 }
 </script>
 <style scoped lang="sass">
-  @import "./styles/login-register.scss"
+   @import "./styles/login-register.scss"
 </style>

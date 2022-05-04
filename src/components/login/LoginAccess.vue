@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div>
       <!-- <meu-banner :url="url" :titulo="titulo" /> -->
-      <div class="main-view login" >
+      <div>
         <login />
       </div>
   </div>
@@ -9,17 +9,17 @@
 
 <script>
 
-//import Banner from '../banner/Banner.vue'
+// import Banner from '../banner/Banner.vue'
 import Login from '../login/Login.vue'
 export default {
   components: {
-   // 'meu-banner': Banner,
+    // 'meu-banner': Banner,
     login: Login
   },
 
   data () {
     return {
-     // url: require('@/assets/images/banner_contact.jpg'),
+      // url: require('@/assets/images/banner_contact.jpg'),
       titulo: 'Login'
     }
   },

@@ -1,14 +1,14 @@
 <template>
-  
-    <div class="home">
-      <div class="main-view">
+
+    <div >
+      <div>
         <h1>{{titulo}}</h1>
         Github: @daniloscipioni
         WhatsApp: 11 971266419
         linkedin: linkedin.com/in/danilo-scipioni-95a74428
       </div>
     </div>
- 
+
 </template>
 
 <script>

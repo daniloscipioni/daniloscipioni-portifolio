@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="home">
-      <div class="main-view">
+    <div>
+      <div>
     <h1>{{titulo}}</h1>
        Esta área é exclusivamente para apresentar um pouco de como esta plataforma foi desenvolvida
       <ul>
