@@ -3,7 +3,7 @@
     <meu-header :rotas="routes" />
     <v-container>
       <v-row>
-        <v-col md="8" offset-md="2" outline >
+        <v-col md="6" offset-md="4"  >
           <v-card flat outlined>
             <router-view></router-view>
           </v-card>
