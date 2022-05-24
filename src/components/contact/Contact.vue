@@ -3,9 +3,11 @@
     <div >
       <div>
         <h1>{{titulo}}</h1>
-        Github: @daniloscipioni
-        WhatsApp: 11 971266419
-        linkedin: linkedin.com/in/danilo-scipioni-95a74428
+        <ul>
+          <li><v-icon>mdi-github</v-icon> @daniloscipioni</li>
+          <li><v-icon>mdi-whatsapp</v-icon> (11) 971266419</li>
+          <li><v-icon>mdi-linkedin</v-icon> www.linkedin.com/in/danilo-scipioni</li>
+        </ul>
       </div>
     </div>
 
@@ -37,3 +39,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+li {
+  list-style-type: none;
+}
+</style>

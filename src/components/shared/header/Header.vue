@@ -15,8 +15,9 @@
             <v-list-item-content>
               <v-list-item-title class="text-h6">
                 Danilo Scipioni
+
               </v-list-item-title>
-              <v-list-item-subtitle>danilo.edu@gmail.com</v-list-item-subtitle>
+              <v-list-item-subtitle>daniloedu@gmail.com</v-list-item-subtitle>
             </v-list-item-content>
           </v-list-item>
         </v-list>

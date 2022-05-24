@@ -5,11 +5,11 @@
         <h1>{{ titulo }}</h1>
         <ul>
           <li>Javascript</li>
-          <li>htmlt</li>
-          <li>csst</li>
-          <li>postgrest</li>
-          <li>sqlservert</li>
-          <li>javat</li>
+          <li>html</li>
+          <li>css</li>
+          <li>postgres</li>
+          <li>sqlserver</li>
+          <li>java</li>
         </ul>
       </div>
     </div>
