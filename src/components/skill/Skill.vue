@@ -23,7 +23,14 @@ export default {
     return {
       //  url: require('@/assets/images/banner_skills.jpg'),
       titulo: "Habilidades",
-      object: ["Javascript", "Css", "Html", "Java", "Postgres", "Sql"],
+      object: [
+        { description: 'Javascript', icon: 'mdi-language-javascript' },
+        { description: 'Node', icon: 'mdi-nodejs' },
+        { description: 'Html', icon: 'mdi-language-html5' },
+        { description: 'CSS', icon: 'mdi-language-css3' },
+        { description: 'Postgres', icon: 'mdi-database' },
+        { description: 'Java', icon: 'mdi-language-java' },
+      ],
     };
   },
   computed: {},

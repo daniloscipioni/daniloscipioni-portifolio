@@ -8,6 +8,7 @@
       </div>
       <div >
         <!-- <meu-news /> -->
+        <input type="file" accept="image/*;capture=camera">
     </div>
   </div>
 </template>

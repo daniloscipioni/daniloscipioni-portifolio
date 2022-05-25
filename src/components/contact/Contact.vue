@@ -3,11 +3,7 @@
     <div >
       <div>
         <h1>{{titulo}}</h1>
-        <ul>
-          <li><v-icon>mdi-github</v-icon> @daniloscipioni</li>
-          <li><v-icon>mdi-whatsapp</v-icon> (11) 971266419</li>
-          <li><v-icon>mdi-linkedin</v-icon> www.linkedin.com/in/danilo-scipioni</li>
-        </ul>
+        <chips :itens="object" />
       </div>
     </div>
 
@@ -16,15 +12,22 @@
 <script>
 
 //import Banner from '../banner/Banner.vue'
+import Chips from '../shared/chips/Chips.vue'
 export default {
   components: {
     //'meu-banner': Banner
+    chips: Chips
   },
 
   data () {
     return {
      // url: require('@/assets/images/banner_contact.jpg'),
-      titulo: 'Contato'
+      titulo: 'Contato',
+      object: [
+        { description: '@daniloscipioni', icon: 'mdi-github' },
+        { description: '(11) 971266419', icon: 'mdi-whatsapp' },
+        { description: 'www.linkedin.com/in/danilo-scipioni', icon: 'mdi-linkedin' }
+      ],
     }
   },
   computed: {
